@@ -76,6 +76,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define FBX_COMMON_H
 
 #include <string>
+#include <cstdint>
 
 namespace FBXDocParser {
 const std::string NULL_RECORD = { // 13 null bytes
