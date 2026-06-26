@@ -9,7 +9,7 @@ env:
 
 jobs:
   linux-editor-mono:
-    runs-on: "ubuntu-20.04"
+    runs-on: "ubuntu-22.04"
     name: Editor w/ Mono (target=release_debug, tools=yes)
 
     steps:
@@ -72,7 +72,7 @@ jobs:
           retention-days: 14
 
   linux-template-mono:
-    runs-on: "ubuntu-20.04"
+    runs-on: "ubuntu-22.04"
     name: Template w/ Mono (target=release, tools=no)
 
     steps:
@@ -134,7 +134,7 @@ jobs:
           retention-days: 14
 
   linux-editor-sanitizers:
-    runs-on: "ubuntu-20.04"
+    runs-on: "ubuntu-22.04"
     name: Editor and exported project with sanitizers (target=debug/release, tools=yes/no, debug_symbols=yes/full, use_ubsan=yes, use_asan=yes)
 
     steps:

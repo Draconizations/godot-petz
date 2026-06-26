@@ -8,7 +8,7 @@ env:
 
 jobs:
   linux-editor:
-    runs-on: "ubuntu-20.04"
+    runs-on: "ubuntu-22.04"
     name: Linux Headless w/ Mono (target=release_debug, tools=yes)
 
     steps:
@@ -63,7 +63,7 @@ jobs:
           scons -j2 verbose=yes warnings=all werror=yes platform=server tools=yes target=release_debug module_mono_enabled=yes mono_glue=no
 
   linux-server:
-    runs-on: "ubuntu-20.04"
+    runs-on: "ubuntu-22.04"
     name: Linux Server w/ Mono (target=release, tools=no)
 
     steps:
