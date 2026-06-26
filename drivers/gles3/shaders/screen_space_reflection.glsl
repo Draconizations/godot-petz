@@ -30,7 +30,7 @@ uniform float camera_z_near;
 uniform float camera_z_far;
 
 uniform vec2 viewport_size;
-unfiromm float ortho_size;
+uniform float ortho_size;
 uniform vec2 pixel_size;
 
 uniform float filter_mipmap_levels;
