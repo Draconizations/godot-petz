@@ -16,6 +16,7 @@
 #ifndef VHACD_ICHULL_H
 #define VHACD_ICHULL_H
 #include "vhacdManifoldMesh.h"
+#include <cstdint>
 #include "vhacdVector.h"
 
 namespace VHACD {

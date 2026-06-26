@@ -1,6 +1,6 @@
 #include "resource_importer_texture_petz.h"
 #include "scene/resources/texture.h"
-#include <core\io\image_loader.h>
+#include "core/io/image_loader.h"
 
 ResourceImporterTexturePetz *ResourceImporterTexturePetz::singleton = NULL;
 
