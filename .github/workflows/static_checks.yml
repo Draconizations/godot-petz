@@ -21,7 +21,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -qq dos2unix python3-pip moreutils
           sudo update-alternatives --remove-all clang-format || true
-          sudo update-alternatives --install /usr/bin/clang-format clang-format /usr/bin/clang-format-10 100
+          sudo update-alternatives --install /usr/bin/clang-format clang-format /usr/bin/clang-format-15 100
           sudo pip3 install black==24.8.0 pygments
 
       - name: File formatting checks (file_format.sh)
