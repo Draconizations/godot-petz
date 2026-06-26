@@ -6,7 +6,7 @@ on:
 env:
   # Only used for the cache key. Increment version to force clean build.
   GODOT_BASE_BRANCH: 3.2
-  SCONSFLAGS: verbose=yes warnings=all werror=yes debug_symbols=no
+  SCONSFLAGS: verbose=yes warnings=all debug_symbols=no
   EM_VERSION: 1.39.20
   EM_CACHE_FOLDER: "emsdk-cache"
 

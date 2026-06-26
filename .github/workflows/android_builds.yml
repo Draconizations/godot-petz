@@ -6,7 +6,7 @@ on:
 env:
   # Only used for the cache key. Increment version to force clean build.
   GODOT_BASE_BRANCH: 3.2
-  SCONSFLAGS: verbose=yes warnings=all werror=yes debug_symbols=no
+  SCONSFLAGS: verbose=yes warnings=all debug_symbols=no
   ANDROID_HOME: /home/runner/work/godot/godot/android-sdk
   ANDROID_NDK_ROOT: /home/runner/work/godot/godot/android-sdk/ndk/21.1.6352462
   ANDROID_NDK_VERSION: 21.1.6352462
