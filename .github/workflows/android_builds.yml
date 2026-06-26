@@ -68,7 +68,7 @@ jobs:
           cd ../../..
           ls -l bin/
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with:
           name: ${{ github.job }}
           path: bin/*

@@ -53,7 +53,7 @@ jobs:
           scons tools=yes target=release_debug
           ls -l bin/
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with:
           name: ${{ github.job }}
           path: bin/*
@@ -102,7 +102,7 @@ jobs:
           scons target=release tools=no debug_symbols=no
           ls -l bin/
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with:
           name: ${{ github.job }}
           path: bin/*
