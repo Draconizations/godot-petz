@@ -18,13 +18,13 @@ jobs:
     name: Editor (target=release_debug, tools=yes)
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v7
 
       # Upload cache on completion and check it out now
       # Editing this is pretty dangerous for Windows since it can break and needs to be properly tested with a fresh cache.
     - name: Load .scons_cache directory
       id: windows-editor-cache
-      uses: RevoluPowered/cache@v2.1
+      uses: actions/cache@v4
       with:
         path: /.scons_cache/
         key: ${{github.job}}-${{env.GODOT_BASE_BRANCH}}-${{github.ref}}-${{github.sha}}
@@ -35,7 +35,7 @@ jobs:
 
     # Use python 3.x release (works cross platform; best to keep self contained in it's own step)
     - name: Set up Python 3.x
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v6
       with:
         # Semantic version range syntax or exact version of a Python version
         python-version: '3.x'
@@ -69,13 +69,13 @@ jobs:
     name: Template (target=release, tools=no)
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v7
 
     # Upload cache on completion and check it out now
     # Editing this is pretty dangerous for Windows since it can break and needs to be properly tested with a fresh cache.
     - name: Load .scons_cache directory
       id: windows-template-cache
-      uses: RevoluPowered/cache@v2.1
+      uses: actions/cache@v4
       with:
         path: /.scons_cache/
         key: ${{github.job}}-${{env.GODOT_BASE_BRANCH}}-${{github.ref}}-${{github.sha}}
@@ -86,7 +86,7 @@ jobs:
 
     # Use python 3.x release (works cross platform)
     - name: Set up Python 3.x
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v6
       with:
         # Semantic version range syntax or exact version of a Python version
         python-version: '3.x'
