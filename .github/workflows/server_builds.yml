@@ -24,11 +24,13 @@ jobs:
             cache-name: server-editor-mono
             target: release_debug
             tools: true
+            artifact: true
 
           - name: Linux Server w/ Mono (target=release, tools=no)
             cache-name: server-template-mono
             target: release
             tools: false
+            artifact: false
 
     steps:
       - uses: actions/checkout@v4
@@ -66,3 +68,9 @@ jobs:
         with:
           cache-name: ${{ matrix.cache-name }}
         continue-on-error: true
+
+      - name: Upload artifact
+        uses: ./.github/actions/upload-artifact
+        if: ${{ matrix.artifact }}
+        with:
+          name: ${{ matrix.cache-name }}
