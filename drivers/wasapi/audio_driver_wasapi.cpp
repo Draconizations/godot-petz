@@ -37,7 +37,7 @@
 
 #include <functiondiscoverykeys.h>
 
-#ifndef PKEY_Device_FriendlyName
+#ifdef PKEY_Device_FriendlyName
 
 #undef DEFINE_PROPERTYKEY
 /* clang-format off */
