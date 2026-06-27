@@ -15,6 +15,7 @@ All rights reserved.
 #pragma once
 #ifndef VHACD_MANIFOLD_MESH_H
 #define VHACD_MANIFOLD_MESH_H
+#include <cstdint>
 #include "vhacdCircularList.h"
 #include "vhacdSArray.h"
 #include "vhacdVector.h"
